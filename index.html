@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine gift</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Happy Valentine 💖</h1>
+  <p>This website i presented to the special person in my live.</p>
+
+  <div class="card">
+    <p>
+      sorry if i only make this simple website for u (maaf yh kalau ada yang typo atau grammarnya kurang LOL)
+    </p>
+
+    <a href="gallery.html" class="btn"> All ur Pictures📸</a>
+    <a href="letter.html" class="btn">Letter For You 💌</a>
+    <a href="music.html" class="btn">Ur Favorite Band And The Music 🎵</a>
+
+  </div>
+</div>
+<audio id="bgMusic" loop>
+  <source src="audio/wave to earth - 사랑으로 (love.).mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const music = document.getElementById("bgMusic");
+
+  if (localStorage.getItem("playMusic") === "true") {
+    music.play().catch(() => {});
+    localStorage.removeItem("playMusic");
+  }
+
+});
+</script>
+
+</body>
+</html>
